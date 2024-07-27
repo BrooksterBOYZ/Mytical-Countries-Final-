@@ -5,15 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic styles for the carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .carousel-item img {
+            width: 100%;
+            display: block;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="navbar">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="store.html" class="active">Store</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -22,77 +67,88 @@
         <section id="store">
             <div class="container">
                 <h1>Our Products</h1>
-                <div class="product-category">
-                    <h2>Mugs</h2>
-                    <div class="product-list">
-                        <!-- Placeholder for Mug product items -->
-                        <div class="product-item">
-                            <h3>Mythical Mug</h3>
-                            <p>Price: $20.00</p>
-                            <img src="https://replit.com/@BrooksTafrshi/Final-Project-Orange#Screenshot%202024-07-27%20at%2010.22.05%E2%80%AFAM%20Small.png" alt="Mythical Mug">
+
+                <!-- Carousel for Product Images -->
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://example.com/mythical-mug.png" alt="Mythical Mug">
+                            <div class="carousel-caption">
+                                <h3>Mythical Mug</h3>
+                                <p>Price: $20.00</p>
+                            </div>
                         </div>
-                        <!-- Add more mug items as needed -->
+                        <div class="carousel-item">
+                            <img src="https://example.com/mythical-sweater.png" alt="Mythical Sweater">
+                            <div class="carousel-caption">
+                                <h3>Mythical Sweater</h3>
+                                <p>Price: $30.00</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://example.com/mythical-tshirt.png" alt="Mythical T-Shirt">
+                            <div class="carousel-caption">
+                                <h3>Mythical T-Shirt</h3>
+                                <p>Price: $25.00</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://example.com/mythical-shoe.png" alt="Mythical Shoe">
+                            <div class="carousel-caption">
+                                <h3>Mythical Shoe</h3>
+                                <p>Price: $45.00</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://example.com/mythical-tote-bag.png" alt="Mythical Tote Bag">
+                            <div class="carousel-caption">
+                                <h3>Mythical Tote Bag</h3>
+                                <p>Price: $10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button id="prev">&lt;</button>
+                        <button id="next">&gt;</button>
                     </div>
                 </div>
 
-                <div class="product-category">
-                    <h2>Sweaters</h2>
-                    <div class="product-list">
-                        <!-- Placeholder for Sweater product items -->
-                        <div class="product-item">
-                            <h3>Mythical Sweater</h3>
-                            <p>Price: $30.00</p>
-                            <img src="https://replit.com/@BrooksTafrshi/Final-Project-Orange#Screenshot%202024-07-27%20at%2010.24%20Background%20Removed.33%E2%80%AFAM.png" alt="Mythical Sweater">
-                        </div>
-                        <!-- Add more sweater items as needed -->
-                    </div>
-                </div>
-
-                <div class="product-category">
-                    <h2>T-Shirts</h2>
-                    <div class="product-list">
-                        <!-- Placeholder for T-Shirt product items -->
-                        <div class="product-item">
-                            <h3>Mythical T-Shirt</h3>
-                            <p>Price: $25.00</p>
-                            <img src="https://replit.com/@BrooksTafrshi/Final-Project-Orange#Screenshot%202024-07-27%20at%2010.17.09%E2%80%AFAM.png" alt="Mythical T-Shirt">
-                        </div>
-                        <!-- Add more t-shirt items as needed -->
-                    </div>
-                </div>
-
-                <div class="product-category">
-                    <h2>Shoes</h2>
-                    <div class="product-list">
-                        <!-- Placeholder for Shoe product items -->
-                        <div class="product-item">
-                            <h3>Mythical Shoe</h3>
-                            <p>Price: $45.00</p>
-                            <img src="https://replit.com/@BrooksTafrshi/Final-Project-Orange#Screenshot%202024-07-27%20at%2010-1.25.54%E2%80%AFAM.png" alt="Mythical Shoe">
-                        </div>
-                        <!-- Add more shoe items as needed -->
-                    </div>
-                </div>
-
-                <div class="product-category">
-                    <h2>Tote Bags</h2>
-                    <div class="product-list">
-                        <!-- Placeholder for Tote Bag product items -->
-                        <div class="product-item">
-                            <h3>Mythical Tote Bag</h3>
-                            <p>Price: $10.00</p>
-                            <img src="https://replit.com/@BrooksTafrshi/Final-Project-Orange#Screenshot%202024-07-27%20at%2010.50.13%E2%80%AFAM.png" alt="Mythical Tote Bag">
-                        </div>
-                        <!-- Add more tote bag items as needed -->
-                    </div>
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Mythical Countries All rights reserved.</p>
+        <p>&copy; 2024 Mythical Countries. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript for carousel functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                carouselInner.style.transform = `translateX(${offset}%)`;
+            }
+
+            document.getElementById('next').addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            });
+
+            document.getElementById('prev').addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateCarousel();
+            });
+
+            // Initial carousel update
+            updateCarousel();
+        });
+    </script>
 </body>
 </html>
+
 
